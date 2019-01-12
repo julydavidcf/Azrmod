@@ -1,4 +1,8 @@
-item.Magiccube.name=心智魔方
-item.Coin.name=物资
-item.Reddimon.name=红钻
-item.Emblem.name=荣誉徽章
+
+
+
+//Item
+item.magiccube.name=心智魔方
+item.coin.name=物资
+item.reddimon.name=红钻
+item.emblem.name=荣誉徽章
