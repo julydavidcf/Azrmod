@@ -1,8 +1,12 @@
 
 
 
-//Item
+//Items
 item.magiccube.name=心智魔方
 item.coin.name=物资
-item.reddimon.name=红钻
+item.reddimon.name=红钻石
 item.emblem.name=荣誉徽章
+
+
+//Blocks
+tile.rd_block.name=红钻石块
