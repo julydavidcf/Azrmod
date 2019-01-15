@@ -6,7 +6,16 @@ item.magiccube.name=心智魔方
 item.coin.name=物资
 item.reddimon.name=红钻石
 item.emblem.name=荣誉徽章
+item.t4box.name=T4科技箱
+item.oil.name=石油
 
 
 //Blocks
 tile.rd_block.name=红钻石块
+
+//Tools
+item.ayanami_sword.name=斩舰刀
+item.yhc_pickaxe.name=萤火虫之稿
+
+//Food
+item.coke.name=酸素可乐

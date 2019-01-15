@@ -1,6 +1,7 @@
 package com.Nagato.Azurlanemod;
 
 import com.Nagato.Azurlanemod.Util.Reference;
+import com.Nagato.Azurlanemod.Util.handlers.RegistryHandler;
 import com.Nagato.Azurlanemod.proxy.CommonProxy;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -27,22 +28,20 @@ public class Azurlanemod
 
     public static CommonProxy proxy;
 
+    @EventHandler
+    public static void init(FMLInitializationEvent event) {
+        RegistryHandler.initRegistries();}
+    @EventHandler
+    public static void postInit(FMLPostInitializationEvent event) {
+        RegistryHandler.postInitRegistries(event);}
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
 
+        RegistryHandler.preInitRegistries(event);
 
     }
 
-    @EventHandler
-    public void init(FMLInitializationEvent event)
-    {
 
-    }
 
-    @EventHandler
-    public void init(FMLPostInitializationEvent event)
-    {
-
-    }
 }
