@@ -19,3 +19,8 @@ item.yhc_pickaxe.name=萤火虫之稿
 
 //Food
 item.coke.name=酸素可乐
+tile.oil_plant.name=油田
+item.oilseed.name=油田
+
+//Enchant
+enchantment.waterwalk.name=水上行走

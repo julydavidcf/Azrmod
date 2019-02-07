@@ -9,7 +9,10 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import org.apache.logging.log4j.Logger;
+
+import java.io.File;
 
 @Mod(modid = Azurlanemod.MODID, name = Azurlanemod.NAME, version = Azurlanemod.VERSION)
 public class Azurlanemod
@@ -27,6 +30,7 @@ public class Azurlanemod
     @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
 
     public static CommonProxy proxy;
+    public static File config;
 
     @EventHandler
     public static void init(FMLInitializationEvent event) {
@@ -41,7 +45,14 @@ public class Azurlanemod
         RegistryHandler.preInitRegistries(event);
 
     }
-
-
-
+    @EventHandler
+    public static void serverInit(FMLServerStartingEvent event)
+    {
+        RegistryHandler.serverRegistries(event);
+    }
 }
+
+
+
+
+

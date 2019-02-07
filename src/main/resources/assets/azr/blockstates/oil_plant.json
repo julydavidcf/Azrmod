@@ -1,0 +1,16 @@
+{
+  "variants":{
+    "age=0":{"model":"azr:oil_plant0"},
+    "age=1":{"model":"azr:oil_plant1"},
+    "age=2":{"model":"azr:oil_plant2"},
+    "age=3":{"model":"azr:oil_plant3"},
+    "age=4":{"model":"azr:oil_plant4"},
+    "age=5":{"model":"azr:oil_plant5"},
+    "age=6":{"model":"azr:oil_plant6"},
+    "age=7":{"model":"azr:oil_plant7"}
+  }
+
+
+
+
+}

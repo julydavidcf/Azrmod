@@ -1,26 +1,38 @@
 package com.Nagato.Azurlanemod.Entity.Render;
 
-//import javax.annotation.Nullable;
-//
-//public class RenderBullet extends RenderArrow<EntityBullet> {
-////
-////    public static final ResourceLocation TEXTURES1 = new ResourceLocation(Reference.MOD_ID + ":textures/entity/projectile/bullet.png");
-////
-////    public RenderBullet(RenderManager manager)
-////    {
-////        super(manager, new ModelBullet(), 0.5F);
-////    }
-////
-////    @Nullable
-////    @Override
-////    protected ResourceLocation getEntityTexture(EntityChicken entity) {
-////        return TEXTURES1;
-//    }
-//
-////    @Override
-////    protected void applyRotations(EntityChicken entityLiving, float p_77043_2_, float rotationYaw, float partialTicks)
-////    {
-////        super.applyRotations(entityLiving, p_77043_2_, rotationYaw, partialTicks);
-////    }
-//
-//}
+import com.Nagato.Azurlanemod.Entity.EntityHva;
+import com.Nagato.Azurlanemod.Util.Reference;
+import com.init.model.ModelBullet;
+import net.minecraft.client.renderer.entity.RenderArrow;
+import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+
+import javax.annotation.Nullable;
+@SideOnly(Side.CLIENT)
+public class RenderBullet extends RenderArrow<EntityHva> {
+    private ModelBullet model;
+
+    public static final ResourceLocation TEXTURES1 = new ResourceLocation(Reference.MOD_ID + ":textures/entity/bullet.png");
+
+
+
+    public RenderBullet(RenderManager renderManagerIn) {
+        super(renderManagerIn);
+        model = new ModelBullet();
+    }
+
+
+    @Nullable
+    @Override
+    protected ResourceLocation getEntityTexture(EntityHva entity) {
+        return TEXTURES1;
+    }
+
+    @Override
+    public void doRender(EntityHva entity, double x, double y, double z, float entityYaw, float partialTicks) {
+        bindTexture(TEXTURES1);
+        model.render(entity, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0625F);
+    }
+}

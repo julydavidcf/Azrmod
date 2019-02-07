@@ -8,9 +8,10 @@ public class CommonProxy {
 
     }
     // Client Stuff
-    public void registerModels() {
+    public void registerModels(Item item, int metadata) {
     }
 
+    public void registerModel(Item item, int metadata) {}
     // Client Stuff
     public void registerRenderer() {
     }
